@@ -1,0 +1,105 @@
+
+.coloradio div {
+  clear: both;
+  overflow: hidden;
+}
+
+.coloradio label {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #D1D3D4;
+  font-weight: normal;
+}
+
+.coloradio input[type="radio"]:empty,
+.coloradio input[type="checkbox"]:empty {
+  display: none;
+}
+
+.coloradio input[type="radio"]:empty ~ label,
+.coloradio input[type="checkbox"]:empty ~ label {
+  position: relative;
+  line-height: 2.5em;
+  text-indent: 3.25em;
+  margin-top: 0em;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.coloradio input[type="radio"]:empty ~ label:before,
+.coloradio input[type="checkbox"]:empty ~ label:before {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 2.5em;
+  background: #D1D3D4;
+  border-radius: 3px 0 0 3px;
+}
+
+.coloradio input[type="radio"]:hover:not(:checked) ~ label,
+.coloradio input[type="checkbox"]:hover:not(:checked) ~ label {
+  color: #888;
+}
+
+.coloradio input[type="radio"]:hover:not(:checked) ~ label:before,
+.coloradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+  content: '\2714';
+  text-indent: .9em;
+  color: #C2C2C2;
+}
+
+.coloradio input[type="radio"]:checked ~ label,
+.coloradio input[type="checkbox"]:checked ~ label {
+  color: #777;
+}
+
+.coloradio input[type="radio"]:checked ~ label:before,
+.coloradio input[type="checkbox"]:checked ~ label:before {
+  content: '\2714';
+  text-indent: .9em;
+  color: #333;
+  background-color: #ccc;
+}
+
+.coloradio input[type="radio"]:focus ~ label:before,
+.coloradio input[type="checkbox"]:focus ~ label:before {
+  box-shadow: 0 0 0 3px #999;
+}
+
+.coloradio-default input[type="radio"]:checked ~ label:before,
+.coloradio-default input[type="checkbox"]:checked ~ label:before {
+  color: #333;
+  background-color: #ccc;
+}
+
+.coloradio-primary input[type="radio"]:checked ~ label:before,
+.coloradio-primary input[type="checkbox"]:checked ~ label:before {
+  color: #fff;
+  background-color: #337ab7;
+}
+
+.coloradio-success input[type="radio"]:checked ~ label:before,
+.coloradio-success input[type="checkbox"]:checked ~ label:before {
+  color: #fff;
+  background-color: #5cb85c;
+}
+
+.coloradio-danger input[type="radio"]:checked ~ label:before,
+.coloradio-danger input[type="checkbox"]:checked ~ label:before {
+  color: #fff;
+  background-color: #8D1141;
+}
+
+
+.coloradio-info input[type="radio"]:checked ~ label:before,
+.coloradio-info input[type="checkbox"]:checked ~ label:before {
+  color: #fff;
+  background-color: #5bc0de;
+}
+

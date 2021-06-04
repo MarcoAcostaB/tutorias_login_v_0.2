@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "login-ng-6876d": {
+      "hosting": {
+        "tutorias": [
+          "login-ng-6876d"
+        ]
+      }
+    }
+  }
+}

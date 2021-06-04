@@ -1,0 +1,241 @@
+<!--
+<form [formGroup]="registerForm" (ngSubmit)="onRegister()" >
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3"  >
+    </div>
+    <div class="col-lg-6 shadow-lg p-3 mb-5 bg-white rounded" >
+      <h1 class="text-center text-info">Registrate</h1>
+      <br>
+
+      <label class="visually-hidden" for="autoSizingInputGroup">Nombre</label>
+      <div class="input-group">
+        <div class="input-group-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+          </svg>
+        </div>
+        <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Nombre">
+      </div>
+
+      <br>
+      <label class="visually-hidden" for="apPaterno">Apellido Paterno</label>
+      <div class="input-group">
+        <div class="input-group-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+          </svg>
+        </div>
+        <input type="text" class="form-control" id="apPaterno" placeholder="Apellido Paterno">
+      </div>
+
+      <br>
+      <label class="visually-hidden" for="apMaterno">Apellido Materno</label>
+      <div class="input-group">
+        <div class="input-group-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+          </svg>
+        </div>
+        <input type="text" class="form-control" id="apMaterno" placeholder="Apellido Materno">
+      </div>
+
+      <br>
+      <label class="visually-hidden" for="carrera">Carrera</label>
+      <div class="input-group">
+        <div class="input-group-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+          </svg>
+        </div>
+        <select class="form-select" aria-label="Default select example" id="carrera">
+          <option selected>Carrera</option>
+          <option value="1">ING. SIstemas Computacionales</option>
+          <option value="2">ING. Informatica</option>
+          <option value="3">ING. Bioquimica</option>
+          <option value="3">ING. Electronica</option>
+          <option value="3">ING. Industrial</option>
+          <option value="3">ING. Mecatronica</option>
+          <option value="3">ING. Aeronautica</option>
+          <option value="3">LIC. Contabilidad</option>
+        </select>
+      </div>
+
+      <br>
+      <form class="row g-3">
+        <div class="col-8">
+          <label class="visually-hidden" for="correoIns">Correo Institucional</label>
+          <div class="input-group">
+            <div class="input-group-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+              </svg>
+            </div>
+            <input type="text"  class="form-control" id="correoIns" placeholder="Correo Institucional">
+          </div>
+        </div>
+        <div class="col-3">
+          <label for="extencion" class="visually-hidden">...</label>
+          <input type="text" readonly class="form-control-plaintext" id="extencion" value="@tese.edu.mx">
+        </div>
+      </form>
+
+
+
+
+      <br>
+      <label class="visually-hidden" >Seleccione una opcion:</label>
+        <div class="coloradio">
+          <div class="coloradio-primary">
+            <input type="radio" name="radio" id="radio2" value="1" onchange="habilitar(this.value);"/>
+            <label for="radio2">Estudiantes</label>
+          </div>
+          <div class="coloradio-success">
+            <input type="radio" name="radio" id="radio3" value="2" onchange="habilitar(this.value);"/>
+            <label for="radio3">Docentes</label>
+          </div>
+          <div class="coloradio-danger">
+            <input type="radio" name="radio" id="radio4" value="3" onchange="habilitar(this.value);"/>
+            <label for="radio4">Cordinador</label>
+          </div>
+          <div class="coloradio-info ">
+            <input type="radio" name="radio" id="radio5" value="4" onchange="habilitar(this.value);"/>
+            <label for="radio5">Jefe de Carrera</label>
+          </div>
+        </div>
+
+
+
+      <br>
+      <label class="visually-hidden" for="id_alumno">Matricula</label>
+      <div class="input-group">
+        <div class="input-group-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+          </svg>
+        </div>
+        <input type="number" class="form-control" id="id_alumno" placeholder="Matricula" disabled>
+      </div>
+
+      <br>
+      <label class="visually-hidden" for="id_personal">Numero Empleado</label>
+      <div class="input-group">
+        <div class="input-group-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+          </svg>
+        </div>
+        <input type="number" class="form-control" id="id_personal" placeholder="Numero Empleado" disabled>
+      </div>
+
+
+      <br>
+      <label class="visually-hidden" for="contra">Contraseña</label>
+      <div class="input-group">
+        <div class="input-group-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+          </svg>
+        </div>
+        <input type="password" class="form-control" id="contra" placeholder="Contraseña">
+      </div>
+
+      <br>
+      <label class="visually-hidden" for="confiContra">Confirmar Contraseña</label>
+      <div class="input-group">
+        <div class="input-group-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+          </svg>
+        </div>
+        <input type="password" class="form-control" id="confiContra" placeholder="Confirmar Contraseña" >
+      </div>
+
+      <br>
+      <br>
+
+      <div class="row g-3">
+        <div class="col">
+          <a routerLink="/home">
+            <button class="form-control btn" style="background-color:#8D1141" data-dismiss="modal"><p class="text-white">Cancelar</p></button>
+          </a>
+        </div>
+        <div class="col">
+          <a routerLink="/registro">
+            <button class="form-control btn btn-info" data-dismiss="modal"><p class="text-light">Crear Cuenta</p></button>
+          </a>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="form-group">
+        <a routerLink="/registro">
+          <p class="text-center" data-toggle="modal" data-target="#myModal">¿Ya tienes cuenta?</p>
+        </a>
+      </div>
+
+
+
+
+
+
+    </div>
+    <div class="col-lg-3" >
+    </div>
+  </div>
+</div>
+</form>
+
+-->
+<div class="container">
+  <p class="text-center text-primary">Registro de Usuario Nuevo</p>
+  <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+
+    <div class="form-group">
+      <label class="visually-hidden" for="email">Matricula</label>
+      <div class="input-group">
+        <div class="input-group-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+          </svg>
+        </div>
+        <input type="email" class="form-control" formControlName="email">
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <div class="input-group">
+        <div class="input-group-text">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+            <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+          </svg>
+        </div>
+        <input type="password" class="form-control" formControlName="password">
+      </div>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary form-control" >confirmar</button>
+    </div>
+    <div class="form-group mt-3" >
+      <a [routerLink]="['/home']">
+        <p class="text-center" data-dismiss="modal">Regresar</p>
+      </a>
+    </div>
+  </form>
+</div>
+<app-modal-alum></app-modal-alum>
+
+
+
+
+
+
+
+
+
+
+
+
