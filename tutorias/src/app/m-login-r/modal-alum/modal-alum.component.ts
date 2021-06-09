@@ -23,9 +23,13 @@ export class ModalAlumComponent implements OnInit {
     const {email, password} = this.loginForm.value;
     try {
     const user = await this.autSvc.login(email, password);
-    if (user){
+    if (user && user.user.emailVerified){
       /*redireccionamiento a /logon/user*/
       this.router.navigate(['/login/usuario']);
+    }else if (user){
+      this.router.navigate(['/verificacion-email']);
+    } else {
+      this.router.navigate(['/login/registro']);
     }
     }catch (e) {
       console.log(e);

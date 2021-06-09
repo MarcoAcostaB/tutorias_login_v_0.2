@@ -15,12 +15,14 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import {AngularFireModule} from '@angular/fire';
 import {environment} from '../environments/environment';
+import { SendEmailComponent } from './auth/send-email/send-email.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EncabezadoComponent,
     PieComponent,
+    SendEmailComponent,
 
 
   ],

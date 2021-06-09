@@ -11,6 +11,10 @@ export class AuthService {
   public user: User;
   constructor(public afAuth: AngularFireAuth) { }
 
+  async  sendVerificationEmail(): Promise<void>{
+    return (await this.afAuth.currentUser).sendEmailVerification();
+  }
+
   // tslint:disable-next-line:typedef
   async login(email: string, password: string) {
     try {
@@ -32,6 +36,7 @@ export class AuthService {
         email,
         password
       );
+      this.sendVerificationEmail();
       return result;
     }
     catch (e) {
